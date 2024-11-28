@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Product Page</title>
+</head>
+<body>
+    <header>
+        <!-- Search Bar -->
+        <form id="search-bar">
+            <input type="search" placeholder="Søk her" id="search">
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#popular-products">Produkter</a></li>
+                <li class="logo"><a href="index.html">Logo</a></li>
+                <li><a href="index.html#popular-categories">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </nav>
+        <!-- Icons -->
+        <ul class="icons">
+            <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
+            <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+            <li><a href="checkout.html"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </header>
+    <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">Hjem</a> >
+            <a href="categories.html">Kategori</a> >
+            <span>Produktnavn</span>
+        </nav>
+
+        <!-- Product Information -->
+        <section id="product-main">
+            <div id="product-images">
+                <img src="https://picsum.photos/100" alt="Main product image">
+                <div class="small-images">
+                    <img src="https://picsum.photos/100" alt="Small product image">
+                    <img src="https://picsum.photos/100" alt="Small product image">
+                    <img src="https://picsum.photos/100" alt="Small product image">
+                </div>
+            </div>
+            <div id="product-info">
+                <h1>Produktnavn</h1>
+                <a href="#">MERKENAVN</a>
+                <p>5 195 kr inkl. mva.</p>
+                <p><strong>Farge:</strong> <span>Beige</span></p>
+            </div>
+        </section>
+
+        <!-- Similar Products -->
+        <section id="related-products">
+            <h2>Lignende produkter</h2>
+            <a href="product.html" class="product-card-link">
+                <article class="product-card">
+                    <img src="https://picsum.photos/300" alt="Produktbilde">
+                    <h3>Product Name</h3>
+                    <p>Kr 1999</p>
+                </article>
+            </a> 
+            <a href="product.html" class="product-card-link">
+                <article class="product-card">
+                    <img src="https://picsum.photos/300" alt="Produktbilde">
+                    <h3>Product Name</h3>
+                    <p>Kr 1999</p>
+                </article>
+            </a>
+            <a href="product.html" class="product-card-link">
+                <article class="product-card">
+                    <img src="https://picsum.photos/300" alt="Produktbilde">
+                    <h3>Product Name</h3>
+                    <p>Kr 1999</p>
+                </article>
+            </a>
+        </section>
+    </main>
+    <footer id="footer">
+        <section>
+            <h2 class="logo">Logo</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+        </section>
+        <section>
+            <h3>KONTAKT</h3>
+            <ul>
+                <li><i class="fa fa-map-marker"></i> <strong>Adresse:</strong> B R A Veien 4, 1757 Halden</li>
+                <li><i class="fa fa-phone"></i> <strong>Telefon:</strong> 69 60 80 00</li>
+                <li><i class="fa fa-envelope"></i> <strong>E-post:</strong> halden@hiof.no</li>
+                <li><i class="fa fa-clock"></i> <strong>Åpningstider:</strong> Stenger 15:00</li>
+            </ul>
+        </section>
+        <section>
+            <h3>SNARVEIER</h3>
+            <ul>
+                <li><a href="product.html">Produkter</a></li>
+                <li><a href="index.html#popular-categories">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>SOSIALE MEDIER</h3>
+            <ul>
+                <li><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
