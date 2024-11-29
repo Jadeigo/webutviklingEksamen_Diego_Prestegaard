@@ -995,7 +995,6 @@ input[type="button"] {
 /* nav */
 nav[aria-label="Hovedmeny"] {
   position: relative;
-  width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #eee;
 }
