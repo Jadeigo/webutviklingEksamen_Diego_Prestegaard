@@ -774,6 +774,33 @@ footer ul.social li a:hover {
   flex: 0 0 40%;
 }
 
+#related-products {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#related-products h2 {
+  text-align: center;
+  margin-bottom: 40px;  /* Økt margin under overskriften */
+}
+
+/* Ny container for produktkortene */
+#related-products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;  /* Lagt til avstand fra overskriften */
+}
+
+.product-card {
+  border: 2px solid #444;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
 }
   
   @media screen and (max-width: 320px) {
