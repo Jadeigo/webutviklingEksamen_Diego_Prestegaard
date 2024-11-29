@@ -922,12 +922,6 @@ textarea {
   outline: none;
 }
 
-
-.modal {
-  position: fixed;
-  
-}
-
 /*interaktiv elementer har tydelig fokustilstand */
 button:focus,
 input:focus,
