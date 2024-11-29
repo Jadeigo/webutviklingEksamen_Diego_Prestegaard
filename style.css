@@ -782,7 +782,7 @@ footer ul.social li a:hover {
 
 #related-products h2 {
   text-align: center;
-  margin-bottom: 40px;  /* Økt margin under overskriften */
+  margin-bottom: 40px;
 }
 
 /* Ny container for produktkortene */
@@ -790,7 +790,7 @@ footer ul.social li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 60px;  /* Lagt til avstand fra overskriften */
+  margin-top: 60px;  
 }
 
 .product-card {
@@ -845,7 +845,7 @@ textarea {
   z-index: 1;
 }
 
-/* Legg til støtte for prefers-reduced-motion */
+/*støtte for prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -855,7 +855,7 @@ textarea {
   }
 }
 
-/* Base input styles with focus states */
+
 input[type="text"],
 input[type="search"],
 input[type="radio"],
@@ -867,27 +867,27 @@ input[type="checkbox"] {
   transition: all 0.3s ease;
 }
 
-/* Focus states for all inputs */
+
 input:focus {
   outline: none;
   border-color: #0056B3;
   box-shadow: 0 0 0 3px rgba(0,86,179,0.25);
 }
 
-/* Radio and Checkbox focus states */
+
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: 2px solid #0056B3;
   outline-offset: 2px;
 }
 
-/* Make sure inputs are properly sized */
+
 .icon-input input {
   width: 100%;
-  padding-right: 30px; /* Space for icon */
+  padding-right: 30px; 
 }
 
-/* Ensure form elements are keyboard accessible */
+/* sørga for at alle elementer er tastaturtilgjengelige*/
 input,
 button,
 select,
@@ -895,7 +895,7 @@ textarea {
   cursor: pointer;
 }
 
-/* Skip navigation for keyboard users */
+/* Skip navigation for tastatur brukere */
 .skip-link {
   position: absolute;
   top: -40px;
