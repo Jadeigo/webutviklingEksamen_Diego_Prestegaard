@@ -1,3 +1,7 @@
+* {
+  max-width: 100%;
+  word-wrap: break-word;
+}
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -5,6 +9,15 @@ body {
   padding: 10px;
   margin: 0 auto;
   max-width: 1200px;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
 }
 
 /*Header styl*/
@@ -15,6 +28,7 @@ header {
   gap: 15px;
   margin-bottom: 20px;
 }
+
 
 /*Søkebar*/
 #search-bar {
@@ -147,7 +161,7 @@ main {
   font-weight: bold;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #666;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -184,8 +198,9 @@ main {
 
 .product-buttons button {
   padding: 10px 15px;
-  border: 1px solid black;
+  border: 2px solid #444;
   background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 
@@ -261,8 +276,19 @@ main {
 
 #product-info a {
   text-decoration: none;
-  color: #007bff;
-  font-size: 16px;
+  color: #0056B3;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.product-card-link h3,
+.product-card-link p {
+  color: black; 
+  text-decoration: none;
 }
 
 #product-info p {
@@ -284,11 +310,61 @@ main {
 }
 
 .category-card {
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 80px 20px;
   text-align: center;
   margin-bottom: 15px;
+  background-position: center;
+  background-size: cover;
 }
+
+/*Anmeldelser*/
+#reviews {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+#reviews h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.review-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.review-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+
 
 /*Relaterte Produkter*/
 #related-products {
@@ -361,7 +437,7 @@ main {
 
 #personal-info-form button[type="reset"] {
   background-color: transparent;
-  color: #007bff;
+  color: #0056B3;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -445,7 +521,6 @@ main {
   background-color: #555;
 }
 
-/*Betaling*/
 #payment-summary {
   font-size: 14px;
   margin-top: 20px;
@@ -507,3 +582,132 @@ footer ul.social li a:hover {
   color: #007bff;
 }
 
+/*Media queries  for laptop/dekstop*/
+@media (min-width: 768px) {
+  header {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 10px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  #search-bar {
+      flex: 1; 
+      max-width: 300px;
+  }
+
+  .nav-menu {
+      flex: 1; 
+      display: flex;
+      flex-direction: row; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 10px; 
+  }
+
+  .icons {
+      flex: 1; 
+      display: flex;
+      flex-direction: row; 
+      justify-content: flex-end; 
+      align-items: center; 
+      gap: 15px; 
+  }
+
+  footer {
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+  }
+
+  footer section:first-of-type {
+    grid-column: 1 / -1;
+    text-align: left; 
+  }
+
+  footer section:nth-of-type(2),
+  footer section:nth-of-type(3),
+  footer section:nth-of-type(4) {
+    text-align: left;
+  }
+
+  #popular-products {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px; 
+    justify-content: center; 
+    align-items: stretch; 
+    margin:  30px auto;
+  }
+
+  .product-buttons {
+    justify-content: flex-start;
+  }
+
+  #product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #product-grid a.product-card-link {
+    max-width: 350px;
+    margin: 0 1rem;
+  }
+
+/*Populære kategorier*/
+  .category-card {
+    margin-bottom: 0;
+  }
+
+  #category-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
+  }
+  
+  #category-card-grid .category-card:nth-child(1),
+  #category-card-grid .category-card:nth-child(2),
+  #category-card-grid .category-card:nth-child(3) {
+    max-width: 386px; 
+    width: 100%; 
+  }
+  
+  #category-card-grid .category-card:nth-child(4) {
+    grid-column: 1 / 3; 
+    grid-row: 2 / 3; 
+    width: 100%;
+    max-width: 864px;
+    justify-self: center; 
+  }
+  
+  #category-card-grid .category-card:nth-child(5) {
+    grid-column: 3 / 4; 
+    grid-row: 2 / 3; 
+    max-width: 300px; 
+    width: 100%; 
+  }
+  
+  @media screen and (max-width: 320px) {
+    #category-card-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    #category-card-grid .category-card:nth-child(4) {
+      grid-column: auto;
+      width: 100%;
+    }
+    
+    #product-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-menu {
+      flex-direction: column;
+    }
+  }
+}
