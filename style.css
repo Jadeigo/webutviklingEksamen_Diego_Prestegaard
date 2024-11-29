@@ -956,15 +956,6 @@ textarea:focus,
   outline-offset: 2px;
 }
 
-/*redusert bevegelse */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /*hover-effekter med fokus-alternativer */
 @media (hover: none) {
   /* For enheter uten hover-kapasitet */
