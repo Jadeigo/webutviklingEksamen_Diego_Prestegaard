@@ -922,13 +922,13 @@ textarea {
   outline: none;
 }
 
-/* Sikre at modaler ikke lager tastaturfeller */
+
 .modal {
   position: fixed;
-  /* Legg til tabindex=-1 i HTML */
+  
 }
 
-/* Sikre at alle interaktive elementer har tydelig fokustilstand */
+/*interaktiv elementer har tydelig fokustilstand */
 button:focus,
 input:focus,
 select:focus,
@@ -956,7 +956,7 @@ textarea:focus,
   outline-offset: 2px;
 }
 
-/* Støtte for redusert bevegelse */
+/*redusert bevegelse */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -965,7 +965,7 @@ textarea:focus,
   }
 }
 
-/* Erstatt eventuelle hover-effekter med fokus-alternativer */
+/*hover-effekter med fokus-alternativer */
 @media (hover: none) {
   /* For enheter uten hover-kapasitet */
   .product-card-link:hover .product-card,
@@ -973,7 +973,7 @@ textarea:focus,
     transform: none;
   }
   
-  /* Legg til touch-vennlige knapper */
+  /*touch-vennlige knapper*/
   .product-actions {
     display: flex;
     gap: 10px;
@@ -987,7 +987,7 @@ textarea:focus,
   }
 }
 
-/* Sikre at alle interaktive elementer er store nok for touch */
+/* interaktive elementer er stor*/
 button,
 .btn,
 input[type="submit"],
@@ -998,7 +998,7 @@ input[type="button"] {
   padding: 12px;
 }
 
-/* Støtte for prefers-reduced-motion */
+/* redusert motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -1007,7 +1007,7 @@ input[type="button"] {
   }
 }
 
-/* Konsekvent navigasjon styling */
+/* nav */
 nav[aria-label="Hovedmeny"] {
   position: relative;
   width: 100%;
@@ -1015,13 +1015,13 @@ nav[aria-label="Hovedmeny"] {
   border-bottom: 1px solid #eee;
 }
 
-/* Aktiv side-indikator */
+/* side-indikator*/
 .nav-menu [aria-current="page"] {
   border-bottom: 2px solid #007bff;
   font-weight: bold;
 }
 
-/* Forbedret visuell hierarki */
+/* visuell hierarki*/
 .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -1029,7 +1029,7 @@ nav[aria-label="Hovedmeny"] {
   padding: 1rem 0;
 }
 
-/* Konsekvent hover/focus tilstand */
+/*hover/focus*/
 .nav-menu a:hover,
 .nav-menu a:focus {
   background-color: #f8f9fa;
