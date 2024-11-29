@@ -10,6 +10,8 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   font-size: 16px;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
 }
 
 h1 {
@@ -18,9 +20,10 @@ h1 {
 
 p {
   font-size: 1rem;
+  margin-bottom: 2em;
 }
 
-/*Header styl*/
+/*Header*/
 header {
   display: flex;
   flex-direction: column;
@@ -34,11 +37,12 @@ header {
 #search-bar {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 2px solid #444;
   border-radius: 20px;
   padding: 5px 10px;
   width: 100%;
   max-width: 300px;
+  background-color: #fff;
 }
 
 #search-bar input[type="search"] {
@@ -47,11 +51,14 @@ header {
   flex: 1;
   font-size: 14px;
   padding: 5px;
+  border: 2px solid #595959;
+  background-color: #fff;
 }
 
 #search-bar button {
-  background: none;
-  border: none;
+  background-color: #e0e0e0;
+  border: 2px solid #333;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -74,7 +81,10 @@ header {
   color: #000;
   font-weight: 500;
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 0.5em 0.8em;
+  border-bottom: 2px solid transparent;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
 }
 
 .nav-menu .logo a {
@@ -84,8 +94,12 @@ header {
   color: #000;
 }
 
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus {
   color: #007bff;
+  border-bottom: 2px solid #007bff;
+  pointer-events: auto;
+  transition: all 0.3s ease;
 }
 
 /*Ikoner*/
@@ -100,12 +114,18 @@ header {
 
 .icons li a {
   text-decoration: none;
-  color: #000;
+  color: #444;
   font-size: 18px;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-.icons li a:hover {
+.icons li a:hover,
+.icons li a:focus {
   color: #007bff;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 main {
@@ -132,11 +152,11 @@ main {
 /*index*/
 /*Banner*/
 #banner {
-  background-color: #d3d3d3;
+  background-color: #bfbfbf;
   text-align: right;
   padding: 30px 20px;
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto 20px;
   max-width: 100%;
 }
@@ -144,14 +164,14 @@ main {
 #banner h1 {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 15px;
-  line-height: 1.4;
+  margin-bottom: 1em;
+  line-height: 1.5;
 }
 
 #banner p {
   font-size: 14px;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-bottom: 2em;
+  line-height: 1.5;
 }
 
 #banner .btn {
@@ -161,15 +181,19 @@ main {
   font-weight: bold;
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #666;
+  border: 2px solid #333;
   border-radius: 5px;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
 }
 
-#banner .btn:hover {
+#banner .btn:hover,
+#banner .btn:focus {
   background-color: #007bff;
   color: #fff;
   transform: scale(1.05);
+  transition: all 0.3s ease;
+  pointer-events: auto;
 }
 
 /*Populære Produkter*/
@@ -210,6 +234,8 @@ main {
   align-items: center;
   margin-top: 15px;
   text-align: left;
+  border: 1px solid #444;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .product-card img {
@@ -232,14 +258,25 @@ main {
 }
 
 .product-card-link {
-  text-decoration: none; 
-  color: inherit; 
-  display: block; 
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+
+.product-card-link:hover .product-card {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-card-link:focus {
+  outline: 3px solid #007bff;
+  outline-offset: 2px;
 }
 
 .product-card-link h3,
 .product-card-link p {
-  color: black; 
+  color: black;
   text-decoration: none;
 }
 
@@ -287,7 +324,7 @@ main {
 
 .product-card-link h3,
 .product-card-link p {
-  color: black; 
+  color: black;
   text-decoration: none;
 }
 
@@ -310,12 +347,19 @@ main {
 }
 
 .category-card {
-  border: 1px solid white;
+  border: 2px solid #333;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  background-color: rgba(255,255,255,0.9);
   padding: 80px 20px;
   text-align: center;
   margin-bottom: 15px;
   background-position: center;
   background-size: cover;
+}
+
+.category-card h3 {
+  color: #000000;
+  background-color: #fff;
 }
 
 /*Anmeldelser*/
@@ -341,10 +385,8 @@ main {
 
 .review-card {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #444;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   text-align: center;
 }
 
@@ -363,6 +405,9 @@ main {
   font-size: 14px;
   line-height: 1.5;
   color: #666;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+  margin-bottom: 1em;
 }
 
 
@@ -436,17 +481,18 @@ main {
 }
 
 #personal-info-form button[type="reset"] {
-  background-color: transparent;
+  background-color: #f0f0f0;
   color: #0056B3;
-  border: none;
+  border: 1px solid #0056B3;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  text-decoration: underline;
+  border-radius: 5px;
 }
 
 #personal-info-form button[type="reset"]:hover {
-  color: #0056b3;
+  background-color: #e0e0e0;
+  text-decoration: underline;
 }
 
 /*Levering*/
@@ -595,7 +641,6 @@ footer ul.social li a:hover {
   }
 
   #search-bar {
-      flex: 1; 
       max-width: 300px;
   }
 
@@ -655,41 +700,58 @@ footer ul.social li a:hover {
   }
 
   #product-grid a.product-card-link {
-    max-width: 350px;
-    margin: 0 1rem;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
 /*Populære kategorier*/
   .category-card {
-    margin-bottom: 0;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    max-width: 386px;
   }
 
   #category-card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 386px); 
+    grid-template-rows: repeat(2, auto);
     justify-content: center;
+    margin: 2em 0;
+    max-width: 1200px;
   }
   
-  #category-card-grid .category-card:nth-child(1),
-  #category-card-grid .category-card:nth-child(2),
-  #category-card-grid .category-card:nth-child(3) {
-    max-width: 386px; 
-    width: 100%; 
-  }
-  
-  #category-card-grid .category-card:nth-child(4) {
-    grid-column: 1 / 3; 
-    grid-row: 2 / 3; 
+  #category-card-grid .category-card {
+    max-width: 100%;
     width: 100%;
-    max-width: 864px;
-    justify-self: center; 
   }
-  
+
+  #category-card-grid .category-card:nth-child(4) {
+    grid-column: 1 / 3;
+    max-width: 864px;
+  }
+
   #category-card-grid .category-card:nth-child(5) {
-    grid-column: 3 / 4; 
-    grid-row: 2 / 3; 
-    max-width: 300px; 
-    width: 100%; 
+    grid-column: 3 / 4;
+    max-width: 300px;
+  }
+
+  .review-grid {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+  }
+
+  .review-card {
+    background-color: #fff;
+    border: 2px solid #444;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 289px;
+    padding: 20px;
   }
   
   @media screen and (max-width: 320px) {
@@ -710,4 +772,221 @@ footer ul.social li a:hover {
       flex-direction: column;
     }
   }
+
+
+
 }
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, 
+select, 
+textarea {
+  width: 100%;
+  max-width: 100%;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+}
+
+/* Generell regel for alle hover/fokus-effekter */
+[data-hover]:hover,
+[data-hover]:focus {
+  position: relative;
+  z-index: 1;
+}
+
+/* Legg til støtte for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Base input styles with focus states */
+input[type="text"],
+input[type="search"],
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 8px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Focus states for all inputs */
+input:focus {
+  outline: none;
+  border-color: #0056B3;
+  box-shadow: 0 0 0 3px rgba(0,86,179,0.25);
+}
+
+/* Radio and Checkbox focus states */
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: 2px solid #0056B3;
+  outline-offset: 2px;
+}
+
+/* Make sure inputs are properly sized */
+.icon-input input {
+  width: 100%;
+  padding-right: 30px; /* Space for icon */
+}
+
+/* Ensure form elements are keyboard accessible */
+input,
+button,
+select,
+textarea {
+  cursor: pointer;
+}
+
+/* Skip navigation for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #333;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Tydelig fokusindikator */
+:focus {
+  outline: 3px solid #0056B3;
+  outline-offset: 2px;
+}
+
+/* Skjul fokus på ikke-interaktive elementer */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Sikre at modaler ikke lager tastaturfeller */
+.modal {
+  position: fixed;
+  /* Legg til tabindex=-1 i HTML */
+}
+
+/* Sikre at alle interaktive elementer har tydelig fokustilstand */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[role="button"]:focus {
+  outline: 3px solid #0056B3;
+  outline-offset: 2px;
+}
+
+/* Skjul visuelt, men behold for skjermlesere */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Forbedret fokushåndtering */
+:focus {
+  outline: 3px solid #0056B3;
+  outline-offset: 2px;
+}
+
+/* Støtte for redusert bevegelse */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Erstatt eventuelle hover-effekter med fokus-alternativer */
+@media (hover: none) {
+  /* For enheter uten hover-kapasitet */
+  .product-card-link:hover .product-card,
+  .product-card-link:focus .product-card {
+    transform: none;
+  }
+  
+  /* Legg til touch-vennlige knapper */
+  .product-actions {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .product-action-button {
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Sikre at alle interaktive elementer er store nok for touch */
+button,
+.btn,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px;
+}
+
+/* Støtte for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Konsekvent navigasjon styling */
+nav[aria-label="Hovedmeny"] {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* Aktiv side-indikator */
+.nav-menu [aria-current="page"] {
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+}
+
+/* Forbedret visuell hierarki */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* Konsekvent hover/focus tilstand */
+.nav-menu a:hover,
+.nav-menu a:focus {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
